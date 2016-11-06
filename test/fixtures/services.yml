@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  week_days: MyString
+  type: 
+  category_id: 1
+  user_id: 1
+  schedule_id: MyString
+
+two:
+  name: MyString
+  description: MyString
+  week_days: MyString
+  type: 
+  category_id: 1
+  user_id: 1
+  schedule_id: MyString

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  initial_time: 2016-11-06 17:39:33
+  final_time: 2016-11-06 17:39:33
+  service_id: 1
+
+two:
+  initial_time: 2016-11-06 17:39:33
+  final_time: 2016-11-06 17:39:33
+  service_id: 1

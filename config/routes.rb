@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     namespace :api, path: '/' do
       resources :service do
         resources :appointment do
-          resources :review
+          resources :review, only: [:index, :new, :show, :edit, :update]
         end
         resources :schedule
         resources :category

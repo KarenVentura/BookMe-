@@ -21,6 +21,8 @@ gem 'puma', '~> 3.0'
 
 group :development, :test do
   gem 'pry-nav'
+  gem 'factory_girl'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -29,6 +31,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'overcommit'
+  gem 'rspec-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

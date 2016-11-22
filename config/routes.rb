@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   constraints subdomain: 'api' do
     scope module: 'api' do
       namespace :v1 do
-        resources :service do
+        resources :services do
           resources :appointment do
             resources :review, only: [:index, :new, :show, :edit, :update]
           end

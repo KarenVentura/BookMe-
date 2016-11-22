@@ -22,8 +22,9 @@ gem 'active_model_serializers'
 
 group :development, :test do
   gem 'pry-nav'
-  gem 'factory_girl'
-  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
@@ -32,7 +33,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'overcommit'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

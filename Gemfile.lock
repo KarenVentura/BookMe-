@@ -53,6 +53,9 @@ GEM
     erubis (2.7.0)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
+      railties (>= 3.0.0)
     ffi (1.9.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
@@ -137,6 +140,8 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     slop (3.6.0)
     spring (2.0.0)
       activesupport (>= 4.2)
@@ -163,14 +168,15 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
-  factory_girl
+  factory_girl_rails
   listen (~> 3.0.5)
   overcommit
   pg
   pry-nav
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
-  rspec-rails
+  rspec-rails (~> 3.5)
+  shoulda-matchers (~> 3.1)
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

@@ -11,4 +11,4 @@ Category.find_or_create_by(name: "Spa")
 
 user = User.create(name: "Karen", last_name: "Ventura", email: "ventura@gmail.com", telephone: "1231231231", cellphone: "1231231234")
 
-Service.find_or_create_by(name: "Gynecology Gomez", description: "test", week_days: "Monday, Friday", category_id: gynecology.id, user_id: user.id)
+Service.find_or_create_by(name: "Gynecology Gomez", description: "test", week_days: "Monday, Friday", specialty: "health", category_id: gynecology.id, user_id: user.id)

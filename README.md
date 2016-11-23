@@ -27,9 +27,9 @@ After clone this repo and install ruby and ruby on rails framework you need to c
 
 * rake db:seed
 
-* How to run the test suite
+How to run the test suite
 
-bundle exec rspec
+* bundle exec rspec
 
 * How to run the application
 

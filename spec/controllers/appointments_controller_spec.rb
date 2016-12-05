@@ -16,7 +16,7 @@ describe Api::V1::AppointmentsController do
     end
 
     it "returns the information about an appointment on a hash" do
-      appointment_response
+      appointment_response = json_response
       expect(appointment_response[:description]).to eq(appointment.description)
     end
 
@@ -31,7 +31,7 @@ describe Api::V1::AppointmentsController do
       end
 
       it "renders the json representation for the appointment record just created" do
-        appointment_response
+        appointment_response = json_response
         expect(appointment_response[:name]).to eq(@appointment_attributes[:name])
       end
 
@@ -45,12 +45,12 @@ describe Api::V1::AppointmentsController do
       end
 
       it "renders an error json" do
-        appointment_response
+        appointment_response = json_response
         expect(appointment_response).to have_key(:errors)
       end
 
       it "renders the json errors and why could not be created" do
-        appointment_response
+        appointment_response = json_response
         expect(appointment_response[:errors][:user]).to include "must exist"
       end
     end
@@ -63,7 +63,7 @@ describe Api::V1::AppointmentsController do
       end
 
       it "renders the json status for the updated appointment" do
-        appointment_response
+        appointment_response = json_response
         expect(appointment_response[:status]).to eql "your appointment was updated"
       end
 
@@ -76,12 +76,12 @@ describe Api::V1::AppointmentsController do
       end
 
       it "renders an error json" do
-        appointment_response
+        appointment_response = json_response
         expect(appointment_response).to have_key(:errors)
       end
 
       it "renders the json errors and why the appointment could not be created" do
-        appointment_response
+        appointment_response = json_response
         expect(appointment_response[:errors][:user]).to include "must exist"
       end
     end
@@ -93,9 +93,5 @@ describe Api::V1::AppointmentsController do
     end
 
     it { should respond_with 200 }
-  end
-
-  def appointment_response
-    JSON.parse(response.body, symbolize_names: true)
   end
 end

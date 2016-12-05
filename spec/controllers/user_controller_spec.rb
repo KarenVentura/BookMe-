@@ -18,7 +18,7 @@ describe Api::V1::UsersController do
     end
 
     it "returns the information about a service on a hash" do
-      user_response
+      user_response = json_response
       expect(user_response[:name]).to eq(user.name)
     end
 
@@ -33,7 +33,7 @@ describe Api::V1::UsersController do
       end
 
       it "renders the json representation for the user record just created" do
-        user_response
+        user_response = json_response
         expect(user_response[:email]).to eq(@user_attributes[:email])
       end
 
@@ -48,12 +48,12 @@ describe Api::V1::UsersController do
       end
 
       it "renders an error json" do
-        user_response
+        user_response = json_response
         expect(user_response).to have_key(:errors)
       end
 
       it "renders the json errors and why could not be created" do
-        user_response
+        user_response = json_response
         expect(user_response[:errors][:email]).to include "can't be blank"
       end
 
@@ -70,7 +70,7 @@ describe Api::V1::UsersController do
       end
 
       it "renders the json representation for the updated user" do
-        user_response
+        user_response = json_response
         expect(user_response[:email]).to eql "newmail@example.com"
       end
 
@@ -84,12 +84,12 @@ describe Api::V1::UsersController do
       end
 
       it "renders an errors json" do
-        user_response
+        user_response = json_response
         expect(user_response).to have_key(:errors)
       end
 
       it "renders the json errors on whye the user could not be created" do
-        user_response
+        user_response = json_response
         expect(user_response[:errors][:email]).to include "is invalid"
       end
 
@@ -105,10 +105,6 @@ describe Api::V1::UsersController do
     end
 
     it { should respond_with 204 }
-  end
-
-  def user_response
-    JSON.parse(response.body, symbolize_names: true)
   end
 end
 

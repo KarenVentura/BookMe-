@@ -99,4 +99,3 @@ describe Api::V1::ServicesController do
     JSON.parse(response.body, symbolize_names: true)
   end
 end
-

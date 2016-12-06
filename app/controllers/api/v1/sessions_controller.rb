@@ -1,5 +1,6 @@
 module Api::V1
-  class SessionsController < ApplicationController
+  class SessionsController < ApiController
+
     def create
       user_password = params[:session][:password]
       user_email = params[:session][:email]

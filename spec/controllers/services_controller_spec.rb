@@ -16,7 +16,7 @@ describe Api::V1::ServicesController do
     end
 
     it "returns the information about a service on a hash" do
-      service_response
+      service_response = json_response
       expect(service_response[:name]).to eq(service.name)
     end
 
@@ -31,7 +31,7 @@ describe Api::V1::ServicesController do
       end
 
       it "renders the json representation for the service record just created" do
-        service_response
+        service_response = json_response
         expect(service_response[:name]).to eq(@service_attributes[:name])
       end
 
@@ -45,12 +45,12 @@ describe Api::V1::ServicesController do
       end
 
       it "renders an error json" do
-        service_response
+        service_response = json_response
         expect(service_response).to have_key(:errors)
       end
 
       it "renders the json errors and why could not be created" do
-        service_response
+        service_response = json_response
         expect(service_response[:errors][:user]).to include "must exist"
       end
     end
@@ -63,7 +63,7 @@ describe Api::V1::ServicesController do
       end
 
       it "renders the json status for the updated service" do
-        service_response
+        service_response = json_response
         expect(service_response[:status]).to eql "your service was updated"
       end
 
@@ -76,12 +76,12 @@ describe Api::V1::ServicesController do
       end
 
       it "renders an error json" do
-        service_response
+        service_response = json_response
         expect(service_response).to have_key(:errors)
       end
 
       it "renders the json errors and why the service could not be created" do
-        service_response
+        service_response = json_response
         expect(service_response[:errors][:user]).to include "must exist"
       end
     end
@@ -93,9 +93,5 @@ describe Api::V1::ServicesController do
     end
 
     it { should respond_with 200 }
-  end
-
-  def service_response
-    JSON.parse(response.body, symbolize_names: true)
   end
 end

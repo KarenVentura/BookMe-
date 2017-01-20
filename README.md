@@ -11,6 +11,10 @@ Bookme! Is an API for schedule general services that are handled through an appo
 * Increase test coverage
 * Improve this documentation
 
+# Test Suit
+
+[![Build Status](https://travis-ci.org/KarenVentura/BookMe-.svg?branch=master)](https://travis-ci.org/KarenVentura/BookMe-)
+
 # Getting Started
 
 Things you may want to cover:

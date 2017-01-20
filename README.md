@@ -1,7 +1,17 @@
-# README
+# BookMe!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bookme! Is an API for schedule general services that are handled through an appointment diary. Through this API an user can schedule a certain service, taking into account the availability and rating of each.
+
+# Ways that you can help:
+
+* Suggest an improvement
+* Report a bug
+* Add a new feature
+* Fix a bug
+* Increase test coverage
+* Improve this documentation
+
+# Getting Started
 
 Things you may want to cover:
 
@@ -21,20 +31,20 @@ Install PostgreSQL You can use this guide https://www.postgresql.org/download/
 
 After clone this repo and install ruby and ruby on rails framework you need to create the database, inside of this repo on your terminal run: 
 
-**rake db:create**
+`bundle exec rake db:create`
 
-**rake db:migrate**
+`bundle exec rake db:migrate`
 
-**rake db:seed**
+`bundle exec rake db:seed`
 
 How to run the test suite
 
-**bundle exec rspec**
+`bundle exec rspec`
 
 **How to run the application**
 
 In the terminal run:
 
-**rails s**
+`rails s`
 
 you can see the application on this URL http://api.lvh.me:3000/

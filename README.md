@@ -13,7 +13,7 @@ Bookme! Is an API for schedule general services that are handled through an appo
 
 # Test Suit
 
-[![Build Status](https://travis-ci.org/KarenVentura/BookMe-.svg?branch=master)](https://travis-ci.org/KarenVentura/BookMe-)
+<a href="https://codeclimate.com/github/KarenVentura/BookMe-/coverage"><img src="https://codeclimate.com/github/KarenVentura/BookMe-/badges/coverage.svg" /></a> 
 
 # Getting Started
 
